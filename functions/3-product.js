@@ -20,7 +20,7 @@ exports.handler = async (event, context) => {
       const {name, description, image, price} = product.fields
       return {
         statusCode: 200,
-        body: JSON.stringify({id, name, price, description, url: image?.[0]?.url})
+        body: JSON.stringify({id, name, price, description, url: image[0].url})
       }
     } catch (error) {
       return {

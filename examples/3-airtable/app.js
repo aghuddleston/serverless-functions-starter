@@ -2,7 +2,7 @@ const result = document.querySelector('.result')
 
 const fetchData = async () => {
   try {
-    const { data } = await axios.get('/api/3-airtable')
+    const { data } = await axios.get('/api/3-z-complete')
     result.innerHTML = data.map(product => (`
     <a href='product.html?id=${product.id}' class="product">
       <img src=${product.url} alt=${product.name} />
